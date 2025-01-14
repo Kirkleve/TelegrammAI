@@ -1,8 +1,19 @@
 import sqlite3
+import re
+
+
+def sanitize_text(text):
+    """
+    Удаляет все символы, которые могут вызвать проблемы с кодировкой.
+    """
+    if text is None:
+        return ""
+    return re.sub(r'[^\x00-\x7F]+', '', text)  # Убирает символы вне ASCII
 
 
 def create_db():
-    conn = sqlite3.connect('crypto_data.db')
+    conn = sqlite3.connect('crypto_data.db', detect_types=sqlite3.PARSE_DECLTYPES | sqlite3.PARSE_COLNAMES)
+    conn.text_factory = str
     c = conn.cursor()
     c.execute('''CREATE TABLE IF NOT EXISTS crypto_prices (
                  id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -25,7 +36,8 @@ def create_db():
 
 
 def insert_price_data(source, symbol, last_price, high_price, low_price, open_price):
-    conn = sqlite3.connect('crypto_data.db')
+    conn = sqlite3.connect('crypto_data.db', detect_types=sqlite3.PARSE_DECLTYPES | sqlite3.PARSE_COLNAMES)
+    conn.text_factory = str
     c = conn.cursor()
     c.execute(
         "INSERT INTO crypto_prices (source, symbol, last_price, high_price, low_price, open_price) VALUES (?, ?, ?, "

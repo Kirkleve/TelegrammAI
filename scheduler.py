@@ -1,5 +1,5 @@
 from data_sources import get_crypto_data_coingecko, get_crypto_data_bybit, get_crypto_data_coinmarketcap, get_twitter_data, get_crypto_news
-from db_manager import insert_price_data, insert_news_data
+from db_manager import insert_price_data, insert_news_data, sanitize_text
 from logger import logger
 
 def job():
@@ -69,8 +69,8 @@ def job():
         print("Получение данных с Twitter...")
         twitter_data = get_twitter_data()
         for tweet in twitter_data:
-            title = tweet.get('text', 'Нет текста')
-            insert_news_data("Twitter", title, '', '')
+            sanitized_text = sanitize_text(tweet.get('text', 'Нет текста'))
+            insert_news_data("Twitter", sanitized_text, '', '')
 
         print("Данные успешно обновлены.")
     except Exception as e:

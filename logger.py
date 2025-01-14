@@ -3,8 +3,9 @@ import logging
 # Настройка логирования
 logging.basicConfig(
     filename="crypto_log.txt",
-    level=logging.ERROR,
-    format="%(asctime)s - %(message)s"
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    encoding='utf-8'
 )
 
 logger = logging.getLogger()
