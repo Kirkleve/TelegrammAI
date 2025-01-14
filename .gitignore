@@ -1,4 +1,15 @@
+# Исключение ключей
 keys.py
-test.py
-crypto_log.txt
-crypto_data.db
+
+# Базы данных
+*.db
+*.sqlite
+
+# Тестовые файлы
+test*.py
+
+# Кэш и временные файлы
+*.txt
+__pycache__/
+*.pyc
+*.pyo
