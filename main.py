@@ -1,12 +1,11 @@
 import schedule
 import time
-from db_manager import create_db
 from scheduler import job
+from db_manager import create_db
 
 # Создаём базу данных
 create_db()
 
-# Настраиваем регулярный сбор данных
 schedule.every(1).minutes.do(job)
 
 print("Сбор данных запущен...")
