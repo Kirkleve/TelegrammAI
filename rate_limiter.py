@@ -8,5 +8,5 @@ def can_run(key):
     return key not in delays or delays[key] <= datetime.now()
 
 # Установка задержки
-def set_delay(key, delay_minutes=20):
+def set_delay(key, delay_minutes=60):
     delays[key] = datetime.now() + timedelta(minutes=delay_minutes)

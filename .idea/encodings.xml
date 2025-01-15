@@ -12,11 +12,11 @@
     <file url="file://$PROJECT_DIR$/rate_limiter.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/scheduler.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/service/__init__.py" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/service/bybit_service.py" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/service/coingecko_service.py" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/service/coinmarketcap_service.py" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/service/news_service.py" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/service/twitter_service.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/services/bybit_service.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/services/coingecko_service.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/services/coinmarketcap_service.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/services/news_service.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/services/twitter_service.py" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

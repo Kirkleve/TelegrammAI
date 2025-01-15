@@ -8,3 +8,5 @@ api_key_news = "your_news_api_key"
 
 bybit_api_key = "your_bybit_api_key"
 bybit_api_secret = "your_bybit_api_secret"
+
+cryptopanic_api_key = "your_cryptopanic_api_key"
