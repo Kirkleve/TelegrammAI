@@ -5,7 +5,6 @@ keys.py
 *.db
 *.sqlite
 
-
 # ��� � ��������� �����
 *.txt
 __pycache__/
